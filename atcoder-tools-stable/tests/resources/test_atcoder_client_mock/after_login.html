@@ -1,0 +1,779 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AtCoder</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="google-site-verification" content="nXGC_JxO0yoP1qBzMnYD_xgufO6leSLw1kyNo2HZltM" />
+
+
+    <meta name="description" content="AtCoder is a programming contest site for anyone from beginners to experts. We hold weekly programming contests online.">
+    <meta name="author" content="AtCoder Inc.">
+
+    <meta property="og:site_name" content="AtCoder">
+
+    <meta property="og:title" content="AtCoder" />
+    <meta property="og:description" content="AtCoder is a programming contest site for anyone from beginners to experts. We hold weekly programming contests online." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://atcoder.jp/home" />
+    <meta property="og:image" content="https://img.atcoder.jp/assets/atcoder.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@atcoder" />
+
+    <meta property="twitter:title" content="AtCoder" />
+
+    <link href="//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/public/css/bootstrap.min.css?v=202005132348">
+    <link rel="stylesheet" type="text/css" href="/public/css/base.css?v=202005132348">
+    <link rel="shortcut icon" type="image/png" href="//img.atcoder.jp/assets/favicon.png">
+    <link rel="apple-touch-icon" href="//img.atcoder.jp/assets/atcoder.png">
+    <script src="/public/js/lib/jquery-1.9.1.min.js?v=202005132348"></script>
+    <script src="/public/js/lib/bootstrap.min.js?v=202005132348"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/locale/ja.js"></script>
+    <script>
+        var LANG = "en";
+        var userScreenName = "kyuridenamida";
+        var csrfToken = "="
+    </script>
+    <script src="/public/js/utils.js?v=202005132348"></script>
+
+
+
+
+
+
+    <script src="//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({messageStyle:"none",tex2jax:{skipTags:["script","noscript","style","textarea","code"],inlineMath:[['$','$'],['\\(','\\)']]}});</script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    <script src="/public/js/lib/marked.js?v=202005132348"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.5.2/jquery.timeago.min.js"></script>
+
+    <script src="/public/js/blog.js?v=202005132348"></script>
+
+
+
+
+
+
+
+
+    <script src="/public/js/base.js?v=202005132348"></script>
+    <script src="/public/js/ga.js?v=202005132348"></script>
+</head>
+
+<body>
+
+<script type="text/javascript">
+    var __pParams = __pParams || [];
+    __pParams.push({client_id: '468', c_1: 'atcodercontest', c_2: 'ClientSite'});
+</script>
+<script type="text/javascript" src="https://cdn.d2-apps.net/js/tr.js" async></script>
+
+
+
+<div id="main-div" class="float-container">
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+                    <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav">
+
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/contests/">Contest</a></li>
+                    <li><a href="/ranking">Ranking</a></li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <img src='//img.atcoder.jp/assets/top/img/flag-lang/en.png'> English <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/home?lang=ja"><img src='//img.atcoder.jp/assets/top/img/flag-lang/ja.png'> 日本語</a></li>
+                            <li><a href="/home?lang=en"><img src='//img.atcoder.jp/assets/top/img/flag-lang/en.png'> English</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> kyuridenamida <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/users/kyuridenamida"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> My Profile</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/settings"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> General Settings</a></li>
+                            <li><a href="/settings/icon"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Change Photo</a></li>
+                            <li><a href="/settings/password"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Change Password</a></li>
+                            <li><a href="/settings/fav"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> Manage Fav</a></li>
+
+
+
+                            <li class="divider"></li>
+                            <li><a href="javascript:void(form_logout.submit())"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Sign Out</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <form method="POST" name="form_logout" action="/logout?continue=https%3A%2F%2Fatcoder.jp%2Fhome">
+        <input type="hidden" name="csrf_token" value="=" />
+    </form>
+    <div id="main-container" class="container"
+         style="">
+
+
+        <br>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="panel panel-primary">
+                    <div class="panel-heading collapse-heading" data-toggle="collapse" data-target="#collapse-contest">
+                        <h3 class="panel-title">
+                            Contest
+                            <span class="glyphicon pull-right"></span>
+                        </h3>
+                    </div>
+                    <div id="collapse-contest" class="panel-body panel-collapse collapse in">
+
+
+
+                        <div id="contest-table-permanent">
+                            <h4>Permanent Contests</h4>
+
+
+                            <div class="table-responsive">
+                                <table class="table table-default table-striped table-hover table-condensed small" style="margin-bottom:0;">
+                                    <thead>
+                                    <tr>
+
+                                        <th>Contest Name</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    <tr>
+
+                                        <td><small><span class="">◉</span> <a href='/contests/practice'>practice contest</a></small></td>
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+
+                        <hr>
+                        <div id="contest-table-upcoming">
+                            <h4>Upcoming Contests</h4>
+
+
+                            <div class="table-responsive">
+                                <table class="table table-default table-striped table-hover table-condensed small" style="margin-bottom:0;">
+                                    <thead>
+                                    <tr>
+                                        <th width="36%">Start Time</th>
+                                        <th>Contest Name</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    <tr>
+                                        <td><small><a href='http://www.timeanddate.com/worldclock/fixedtime.html?iso=20200517T2100&p1=248' target='blank'><time class='fixtime fixtime-short'>2020-05-17 21:00:00+0900</time></a></small></td>
+                                        <td><small><span class="user-blue">◉</span> <a href='/contests/abc168'>AtCoder Beginner Contest 168</a></small></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><small><a href='http://www.timeanddate.com/worldclock/fixedtime.html?iso=20200523T2100&p1=248' target='blank'><time class='fixtime fixtime-short'>2020-05-23 21:00:00+0900</time></a></small></td>
+                                        <td><small><span class="user-red">◉</span> <a href='/contests/agc044'>AtCoder Grand Contest 044</a></small></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><small><a href='http://www.timeanddate.com/worldclock/fixedtime.html?iso=20200530T2100&p1=248' target='blank'><time class='fixtime fixtime-short'>2020-05-30 21:00:00+0900</time></a></small></td>
+                                        <td><small><span class="user-orange">◉</span> <a href='/contests/nomura2020'>NOMURA Programming Competition 2020</a></small></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><small><a href='http://www.timeanddate.com/worldclock/fixedtime.html?iso=20200607T2100&p1=248' target='blank'><time class='fixtime fixtime-short'>2020-06-07 21:00:00+0900</time></a></small></td>
+                                        <td><small><span class="user-red">◉</span> <a href='/contests/agc045'>AtCoder Grand Contest 045</a></small></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><small><a href='http://www.timeanddate.com/worldclock/fixedtime.html?iso=20200620T2100&p1=248' target='blank'><time class='fixtime fixtime-short'>2020-06-20 21:00:00+0900</time></a></small></td>
+                                        <td><small><span class="user-red">◉</span> <a href='/contests/agc046'>AtCoder Grand Contest 046</a></small></td>
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+
+                        <hr>
+                        <div id="contest-table-recent">
+                            <h4>Recent Contests</h4>
+
+
+                            <div class="table-responsive">
+                                <table class="table table-default table-striped table-hover table-condensed small" style="margin-bottom:0;">
+                                    <thead>
+                                    <tr>
+                                        <th width="36%">Start Time</th>
+                                        <th>Contest Name</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    <tr>
+                                        <td><small><a href='http://www.timeanddate.com/worldclock/fixedtime.html?iso=20200510T2100&p1=248' target='blank'><time class='fixtime fixtime-short'>2020-05-10 21:00:00+0900</time></a></small></td>
+                                        <td><small><span class="user-blue">◉</span> <a href='/contests/abc167'>AtCoder Beginner Contest 167</a></small></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><small><a href='http://www.timeanddate.com/worldclock/fixedtime.html?iso=20200503T2100&p1=248' target='blank'><time class='fixtime fixtime-short'>2020-05-03 21:00:00+0900</time></a></small></td>
+                                        <td><small><span class="user-blue">◉</span> <a href='/contests/abc166'>AtCoder Beginner Contest 166</a></small></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><small><a href='http://www.timeanddate.com/worldclock/fixedtime.html?iso=20200502T2110&p1=248' target='blank'><time class='fixtime fixtime-short'>2020-05-02 21:10:00+0900</time></a></small></td>
+                                        <td><small><span class="user-blue">◉</span> <a href='/contests/abc165'>AtCoder Beginner Contest 165</a></small></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><small><a href='http://www.timeanddate.com/worldclock/fixedtime.html?iso=20200426T2100&p1=248' target='blank'><time class='fixtime fixtime-short'>2020-04-26 21:00:00+0900</time></a></small></td>
+                                        <td><small><span class="user-blue">◉</span> <a href='/contests/abc164'>AtCoder Beginner Contest 164</a></small></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><small><a href='http://www.timeanddate.com/worldclock/fixedtime.html?iso=20200419T2100&p1=248' target='blank'><time class='fixtime fixtime-short'>2020-04-19 21:00:00+0900</time></a></small></td>
+                                        <td><small><span class="user-blue">◉</span> <a href='/contests/abc163'>AtCoder Beginner Contest 163</a></small></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><small><a href='http://www.timeanddate.com/worldclock/fixedtime.html?iso=20200412T2100&p1=248' target='blank'><time class='fixtime fixtime-short'>2020-04-12 21:00:00+0900</time></a></small></td>
+                                        <td><small><span class="user-blue">◉</span> <a href='/contests/abc162'>AtCoder Beginner Contest 162</a></small></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><small><a href='http://www.timeanddate.com/worldclock/fixedtime.html?iso=20200404T2100&p1=248' target='blank'><time class='fixtime fixtime-short'>2020-04-04 21:00:00+0900</time></a></small></td>
+                                        <td><small><span class="user-blue">◉</span> <a href='/contests/abc161'>AtCoder Beginner Contest 161</a></small></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><small><a href='http://www.timeanddate.com/worldclock/fixedtime.html?iso=20200328T2100&p1=248' target='blank'><time class='fixtime fixtime-short'>2020-03-28 21:00:00+0900</time></a></small></td>
+                                        <td><small><span class="user-blue">◉</span> <a href='/contests/abc160'>AtCoder Beginner Contest 160</a></small></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><small><a href='http://www.timeanddate.com/worldclock/fixedtime.html?iso=20200322T2100&p1=248' target='blank'><time class='fixtime fixtime-short'>2020-03-22 21:00:00+0900</time></a></small></td>
+                                        <td><small><span class="user-blue">◉</span> <a href='/contests/abc159'>AtCoder Beginner Contest 159</a></small></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><small><a href='http://www.timeanddate.com/worldclock/fixedtime.html?iso=20200321T2100&p1=248' target='blank'><time class='fixtime fixtime-short'>2020-03-21 21:00:00+0900</time></a></small></td>
+                                        <td><small><span class="user-red">◉</span> <a href='/contests/agc043'>AtCoder Grand Contest 043</a></small></td>
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <br>
+                        <p class="btn-text-group">
+                            <a href='/contests/' class="btn-text">Detail</a>
+
+
+                        </p>
+                    </div>
+                </div>
+                <div class="panel panel-primary">
+                    <div class="panel-heading collapse-heading" data-toggle="collapse" data-target="#collapse-ranking">
+                        <h3 class="panel-title">
+                            Ranking
+                            <span class="glyphicon pull-right"></span>
+                        </h3>
+                    </div>
+                    <div id="collapse-ranking" class="panel-body panel-collapse collapse in">
+                        <div class="table-responsive">
+                            <table class="table table-default table-striped table-hover table-condensed">
+                                <thead>
+                                <tr>
+                                    <th width="8%"></th>
+                                    <th>User</th>
+                                    <th width="20%">Rating</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                <tr>
+                                    <td>1</td>
+                                    <td><img src="//img.atcoder.jp/assets/flag/BY.png"> <img src="//img.atcoder.jp/assets/icon/crown4000.gif"> <a href="/users/tourist" class="username"><span class="user-red">tourist</span></a></td>
+                                    <td>4151</td>
+                                </tr>
+
+                                <tr>
+                                    <td>2</td>
+                                    <td><img src="//img.atcoder.jp/assets/flag/RU.png"> <img src="//img.atcoder.jp/assets/icon/crown3600.gif"> <a href="/users/Um_nik" class="username"><span style="color:#08E8DE;">Um_nik</span></a></td>
+                                    <td>3803</td>
+                                </tr>
+
+                                <tr>
+                                    <td>3</td>
+                                    <td><img src="//img.atcoder.jp/assets/flag/CN.png"> <img src="//img.atcoder.jp/assets/icon/crown3600.gif"> <a href="/users/apiad" class="username"><span class="user-red">apiad</span></a></td>
+                                    <td>3774</td>
+                                </tr>
+
+                                <tr>
+                                    <td>4</td>
+                                    <td><img src="//img.atcoder.jp/assets/flag/CA.png"> <img src="//img.atcoder.jp/assets/icon/crown3600.gif"> <a href="/users/ksun48" class="username"><span style="color:#FF00FF;">ksun48</span></a></td>
+                                    <td>3738</td>
+                                </tr>
+
+                                <tr>
+                                    <td>5</td>
+                                    <td><img src="//img.atcoder.jp/assets/flag/CH.png"> <img src="//img.atcoder.jp/assets/icon/crown3600.gif"> <a href="/users/Petr" class="username"><span class="user-red">Petr</span></a></td>
+                                    <td>3735</td>
+                                </tr>
+
+                                <tr>
+                                    <td>6</td>
+                                    <td><img src="//img.atcoder.jp/assets/flag/US.png"> <img src="//img.atcoder.jp/assets/icon/crown3600.gif"> <a href="/users/ecnerwala" class="username"><span class="user-red">ecnerwala</span></a></td>
+                                    <td>3713</td>
+                                </tr>
+
+                                <tr>
+                                    <td>7</td>
+                                    <td><img src="//img.atcoder.jp/assets/flag/RU.png"> <img src="//img.atcoder.jp/assets/icon/crown3600.gif"> <a href="/users/LHiC" class="username"><span class="user-red">LHiC</span></a></td>
+                                    <td>3671</td>
+                                </tr>
+
+                                <tr>
+                                    <td>8</td>
+                                    <td><img src="//img.atcoder.jp/assets/flag/RU.png"> <img src="//img.atcoder.jp/assets/icon/crown3600.gif"> <a href="/users/cospleermusora" class="username"><span class="user-red">cospleermusora</span></a></td>
+                                    <td>3606</td>
+                                </tr>
+
+                                <tr>
+                                    <td>9</td>
+                                    <td><img src="//img.atcoder.jp/assets/flag/PL.png"> <img src="//img.atcoder.jp/assets/icon/crown3200.gif"> <a href="/users/mnbvmar" class="username"><span class="user-red">mnbvmar</span></a></td>
+                                    <td>3571</td>
+                                </tr>
+
+                                <tr>
+                                    <td>10</td>
+                                    <td><img src="//img.atcoder.jp/assets/flag/JP.png"> <img src="//img.atcoder.jp/assets/icon/crown3200.gif"> <a href="/users/yutaka1999" class="username"><span class="user-red">yutaka1999</span></a></td>
+                                    <td>3557</td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="btn-text-group">
+                            <a href='/ranking' class="btn-text">View all</a>
+                            <span class="divider"></span>
+                            <a href='/hof' class="btn-text">Hall of Fame</a>
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-sm-8">
+
+
+
+
+                <div class="panel panel-info">
+                    <div class="panel-heading post-heading">
+                        <h3 class="panel-title"><a href="/posts/10">Information</a></h3>
+
+                    </div>
+                    <div class="panel-body blog-post">[How to get an account / participate in contests?](http://atcoder.jp/posts/2)
+
+                        [AtCoder&#39;s Contest Format](http://atcoder.jp/posts/1)
+
+                        [AtCoder&#39;s Testcases](https://www.dropbox.com/sh/nx3tnilzqz7df8a/AAAYlTq2tiEHl5hsESw6-yfLa?dl=0) - [AtCoder&#39;s Rating System](https://www.dropbox.com/sh/zpgcogxmmu84rr8/AADcw6o7M9tJFDgtpqEQQ46Ua?dl=0) - [AtCoder Race Ranking](https://img.atcoder.jp/file/GP30.html)</div>
+
+                </div>
+
+
+
+                <hr>
+
+
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading post-heading">
+                        <h3 class="panel-title"><a href="/posts/478">AtCoder Beginner Contest 168 Announcement</a></h3>
+
+                        <small>posted:
+                            <span class="tooltip-unix" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="1589654391">
+							<time class="timeago" datetime="2020/05/17 03:39:51"></time>
+						</span>
+                        </small>
+
+                    </div>
+                    <div class="panel-body blog-post">We will hold &lt;a href=&#34;https://atcoder.jp/contests/abc168&#34;&gt;AtCoder Beginner Contest 168&lt;/a&gt;.
+
+                        - Contest URL: https://atcoder.jp/contests/abc168
+                        - Start Time: http://www.timeanddate.com/worldclock/fixedtime.html?iso=20200517T2100&amp;p1=248
+                        - Duration:  100 minutes
+                        - Number of Tasks: 6
+                        - Writer: &lt;a href=&#34;/users/sheyasutaka&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-orange&#34;&gt;sheyasutaka&lt;/span&gt;&lt;/a&gt;
+                        - Rated range:  ~ 1999
+
+                        The point values will be 100-200-300-400-500-600.
+
+                        We are looking forward to your participation!
+                    </div>
+
+                    <div class="panel-footer post-footer">
+                        <div class="row">
+                            <div class="col-xs-7">
+                                <small>last update:
+                                    <span class="tooltip-unix" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="1589654391">
+									<time class="timeago" datetime="2020/05/17 03:39:51"></time>
+								</span>
+                                </small>
+                            </div>
+                            <div class="col-xs-5 clearfix">
+
+
+
+                                <div class="a2a_kit a2a_kit_size_20 a2a_default_style pull-right" data-a2a-url="https://atcoder.jp/posts/478?lang=en" data-a2a-title="AtCoder Beginner Contest 168 Announcement">
+                                    <a class="a2a_button_facebook"></a>
+                                    <a class="a2a_button_twitter"></a>
+
+                                    <a class="a2a_button_telegram"></a>
+
+                                    <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading post-heading">
+                        <h3 class="panel-title"><a href="/posts/476">AtCoder Beginner Contest 167 Announcement</a></h3>
+
+                        <small>posted:
+                            <span class="tooltip-unix" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="1589046044">
+							<time class="timeago" datetime="2020/05/10 02:40:44"></time>
+						</span>
+                        </small>
+
+                    </div>
+                    <div class="panel-body blog-post">We will hold &lt;a href=&#34;https://atcoder.jp/contests/abc167&#34;&gt;AtCoder Beginner Contest 167&lt;/a&gt;.
+
+                        - Contest URL: https://atcoder.jp/contests/abc167
+                        - Start Time: http://www.timeanddate.com/worldclock/fixedtime.html?iso=20200510T2100&amp;p1=248
+                        - Duration:  100 minutes
+                        - Number of Tasks: 6
+                        - Writer: &lt;a href=&#34;/users/gazelle&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-orange&#34;&gt;gazelle&lt;/span&gt;&lt;/a&gt;, &lt;a href=&#34;/users/kort0n&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-orange&#34;&gt;kort0n&lt;/span&gt;&lt;/a&gt;, &lt;a href=&#34;/users/kyopro_friends&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-orange&#34;&gt;kyopro_friends&lt;/span&gt;&lt;/a&gt;, &lt;a href=&#34;/users/potetisensei&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-orange&#34;&gt;potetisensei&lt;/span&gt;&lt;/a&gt;, &lt;a href=&#34;/users/sheyasutaka&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-orange&#34;&gt;sheyasutaka&lt;/span&gt;&lt;/a&gt;, &lt;a href=&#34;/users/tempura0224&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-red&#34;&gt;tempura0224&lt;/span&gt;&lt;/a&gt;
+                        - Rated range:  ~ 1999
+
+                        The point values will be 100-200-300-400-500-600.
+
+                        We are looking forward to your participation!
+                    </div>
+
+                    <div class="panel-footer post-footer">
+                        <div class="row">
+                            <div class="col-xs-7">
+                                <small>last update:
+                                    <span class="tooltip-unix" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="1589046044">
+									<time class="timeago" datetime="2020/05/10 02:40:44"></time>
+								</span>
+                                </small>
+                            </div>
+                            <div class="col-xs-5 clearfix">
+
+
+
+                                <div class="a2a_kit a2a_kit_size_20 a2a_default_style pull-right" data-a2a-url="https://atcoder.jp/posts/476?lang=en" data-a2a-title="AtCoder Beginner Contest 167 Announcement">
+                                    <a class="a2a_button_facebook"></a>
+                                    <a class="a2a_button_twitter"></a>
+
+                                    <a class="a2a_button_telegram"></a>
+
+                                    <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading post-heading">
+                        <h3 class="panel-title"><a href="/posts/473">AtCoder Beginner Contest 166 Announcement</a></h3>
+
+                        <small>posted:
+                            <span class="tooltip-unix" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="1588478709">
+							<time class="timeago" datetime="2020/05/03 13:05:09"></time>
+						</span>
+                        </small>
+
+                    </div>
+                    <div class="panel-body blog-post">We will hold &lt;a href=&#34;https://atcoder.jp/contests/abc166&#34;&gt;AtCoder Beginner Contest 166&lt;/a&gt;.
+
+                        - Contest URL: https://atcoder.jp/contests/abc166
+                        - Start Time: http://www.timeanddate.com/worldclock/fixedtime.html?iso=20200503T2100&amp;p1=248
+                        - Duration:  100 minutes
+                        - Number of Tasks: 6
+                        - Writer: &lt;a href=&#34;/users/gazelle&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-orange&#34;&gt;gazelle&lt;/span&gt;&lt;/a&gt;, &lt;a href=&#34;/users/kort0n&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-orange&#34;&gt;kort0n&lt;/span&gt;&lt;/a&gt;, &lt;a href=&#34;/users/kyopro_friends&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-orange&#34;&gt;kyopro_friends&lt;/span&gt;&lt;/a&gt;, &lt;a href=&#34;/users/sheyasutaka&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-orange&#34;&gt;sheyasutaka&lt;/span&gt;&lt;/a&gt;, &lt;a href=&#34;/users/ynymxiaolongbao&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-orange&#34;&gt;ynymxiaolongbao&lt;/span&gt;&lt;/a&gt;
+                        - Rated range:  ~ 1999
+
+                        The point values will be 100-200-300-400-500-600.
+
+                        We are looking forward to your participation!
+                    </div>
+
+                    <div class="panel-footer post-footer">
+                        <div class="row">
+                            <div class="col-xs-7">
+                                <small>last update:
+                                    <span class="tooltip-unix" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="1588478709">
+									<time class="timeago" datetime="2020/05/03 13:05:09"></time>
+								</span>
+                                </small>
+                            </div>
+                            <div class="col-xs-5 clearfix">
+
+
+
+                                <div class="a2a_kit a2a_kit_size_20 a2a_default_style pull-right" data-a2a-url="https://atcoder.jp/posts/473?lang=en" data-a2a-title="AtCoder Beginner Contest 166 Announcement">
+                                    <a class="a2a_button_facebook"></a>
+                                    <a class="a2a_button_twitter"></a>
+
+                                    <a class="a2a_button_telegram"></a>
+
+                                    <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading post-heading">
+                        <h3 class="panel-title"><a href="/posts/471">AtCoder Beginner Contest 165 Announcement</a></h3>
+
+                        <small>posted:
+                            <span class="tooltip-unix" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="1588403888">
+							<time class="timeago" datetime="2020/05/02 16:18:08"></time>
+						</span>
+                        </small>
+
+                    </div>
+                    <div class="panel-body blog-post">We will hold &lt;a href=&#34;https://atcoder.jp/contests/abc165&#34;&gt;AtCoder Beginner Contest 165&lt;/a&gt;.
+
+                        - Contest URL: https://atcoder.jp/contests/abc165
+                        - Start Time: http://www.timeanddate.com/worldclock/fixedtime.html?iso=20200502T2100&amp;p1=248
+                        - Duration:  100 minutes
+                        - Number of Tasks: 6
+                        - Writer: &lt;a href=&#34;/users/beet&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-orange&#34;&gt;beet&lt;/span&gt;&lt;/a&gt;, &lt;a href=&#34;/users/DEGwer&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-red&#34;&gt;DEGwer&lt;/span&gt;&lt;/a&gt;, &lt;a href=&#34;/users/kort0n&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-orange&#34;&gt;kort0n&lt;/span&gt;&lt;/a&gt;, &lt;a href=&#34;/users/sheyasutaka&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-orange&#34;&gt;sheyasutaka&lt;/span&gt;&lt;/a&gt;, &lt;a href=&#34;/users/tozangezan&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-red&#34;&gt;tozangezan&lt;/span&gt;&lt;/a&gt;, &lt;a href=&#34;/users/ynymxiaolongbao&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-orange&#34;&gt;ynymxiaolongbao&lt;/span&gt;&lt;/a&gt;
+                        - Rated range:  ~ 1999
+
+                        The point values will be 100-200-300-400-500-600.
+
+                        We are looking forward to your participation!
+                    </div>
+
+                    <div class="panel-footer post-footer">
+                        <div class="row">
+                            <div class="col-xs-7">
+                                <small>last update:
+                                    <span class="tooltip-unix" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="1588404043">
+									<time class="timeago" datetime="2020/05/02 16:20:43"></time>
+								</span>
+                                </small>
+                            </div>
+                            <div class="col-xs-5 clearfix">
+
+
+
+                                <div class="a2a_kit a2a_kit_size_20 a2a_default_style pull-right" data-a2a-url="https://atcoder.jp/posts/471?lang=en" data-a2a-title="AtCoder Beginner Contest 165 Announcement">
+                                    <a class="a2a_button_facebook"></a>
+                                    <a class="a2a_button_twitter"></a>
+
+                                    <a class="a2a_button_telegram"></a>
+
+                                    <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading post-heading">
+                        <h3 class="panel-title"><a href="/posts/469">AtCoder Beginner Contest 164 Announcement</a></h3>
+
+                        <small>posted:
+                            <span class="tooltip-unix" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="1587831350">
+							<time class="timeago" datetime="2020/04/26 01:15:50"></time>
+						</span>
+                        </small>
+
+                    </div>
+                    <div class="panel-body blog-post">We will hold &lt;a href=&#34;https://atcoder.jp/contests/abc164&#34;&gt;AtCoder Beginner Contest 164&lt;/a&gt;.
+
+                        - Contest URL: https://atcoder.jp/contests/abc164
+                        - Start Time: http://www.timeanddate.com/worldclock/fixedtime.html?iso=20200426T2100&amp;p1=248
+                        - Duration:  TBD (around 2 hours)
+                        - Number of Tasks: 6
+                        - Writer: &lt;a href=&#34;/users/kyopro_friends&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-orange&#34;&gt;kyopro_friends&lt;/span&gt;&lt;/a&gt;, &lt;a href=&#34;/users/Kmcode&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-orange&#34;&gt;Kmcode&lt;/span&gt;&lt;/a&gt;, &lt;a href=&#34;/users/latte0119&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-red&#34;&gt;latte0119&lt;/span&gt;&lt;/a&gt;, &lt;a href=&#34;/users/tozangezan&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-red&#34;&gt;tozangezan&lt;/span&gt;&lt;/a&gt;, &lt;a href=&#34;/users/ynymxiaolongbao&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-orange&#34;&gt;ynymxiaolongbao&lt;/span&gt;&lt;/a&gt;, &lt;a href=&#34;/users/wo01&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-red&#34;&gt;wo01&lt;/span&gt;&lt;/a&gt;
+                        - Rated range:  ~ 1999
+
+                        The point values will be 100-200-300-400-500-600.
+
+                        We are looking forward to your participation!
+                    </div>
+
+                    <div class="panel-footer post-footer">
+                        <div class="row">
+                            <div class="col-xs-7">
+                                <small>last update:
+                                    <span class="tooltip-unix" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="1587831350">
+									<time class="timeago" datetime="2020/04/26 01:15:50"></time>
+								</span>
+                                </small>
+                            </div>
+                            <div class="col-xs-5 clearfix">
+
+
+
+                                <div class="a2a_kit a2a_kit_size_20 a2a_default_style pull-right" data-a2a-url="https://atcoder.jp/posts/469?lang=en" data-a2a-title="AtCoder Beginner Contest 164 Announcement">
+                                    <a class="a2a_button_facebook"></a>
+                                    <a class="a2a_button_twitter"></a>
+
+                                    <a class="a2a_button_telegram"></a>
+
+                                    <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <p class="text-center"><a class="btn-text" href="/posts/">Post Archive</a></p>
+            </div>
+        </div>
+
+        <script>
+
+            var userAgent = window.navigator.userAgent.toLowerCase();
+            if (userAgent.toLowerCase().indexOf('msie') !== -1 || userAgent.toLowerCase().indexOf('trident') !== -1) {
+                var text = 'AtCoderはInternet Explorerに対応していません。EdgeやChromeやFirefoxなどの別のブラウザをお使いください。\n';
+                text += 'AtCoder do not support Internet Explorer. Please use other web browser such as Edge, Chrome or Firefox.';
+                alert(text);
+            }
+        </script>
+
+
+
+
+
+        <hr>
+
+
+
+        <div class="a2a_kit a2a_kit_size_20 a2a_default_style pull-right" data-a2a-url="https://atcoder.jp/home?lang=en" data-a2a-title="AtCoder">
+            <a class="a2a_button_facebook"></a>
+            <a class="a2a_button_twitter"></a>
+
+            <a class="a2a_button_telegram"></a>
+
+            <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+        </div>
+
+
+        <script async src="//static.addtoany.com/menu/page.js"></script>
+
+    </div>
+    <hr>
+</div>
+
+<div class="container" style="margin-bottom: 80px;">
+    <footer class="footer">
+
+        <ul>
+            <li><a href="/tos">Terms of service</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/personal">Information Protection Policy</a></li>
+            <li><a href="/company">Company</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/contact">Contact</a></li>
+
+        </ul>
+        <div class="text-center">
+            <small id="copyright">Copyright Since 2012 &copy;<a href="http://atcoder.co.jp">AtCoder Inc.</a> All rights reserved.</small>
+        </div>
+    </footer>
+</div>
+<p id="fixed-server-timer" ></p>
+<div id="scroll-page-top" style="display:none;"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span> Page Top</div>
+
+</body>
+</html>
+
+

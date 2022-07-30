@@ -1,0 +1,1 @@
+atcoder-tools gen abc180 --workspace=Current Directory

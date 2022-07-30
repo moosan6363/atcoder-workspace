@@ -1,0 +1,12 @@
+*AccountInformation*
+*.pyc
+.DS_Store
+/workspace
+do_format.py
+debug.py
+/backup
+.idea
+.coverage
+atcoder_tools.egg-info/
+build/
+dist/

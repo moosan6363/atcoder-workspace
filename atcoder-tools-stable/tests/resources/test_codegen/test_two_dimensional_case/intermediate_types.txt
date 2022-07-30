@@ -1,0 +1,1 @@
+[('H', <class 'int'>), ('W', <class 'int'>), ('c', <class 'int'>), ('A', <class 'int'>)]

@@ -1,0 +1,12 @@
+{% if x is not none %}
+    x is not none
+    {% if y == 1 %}
+        y == 1
+    {% elif y == 2 %}
+        y == 2
+    {% else %}
+         y != 1 and y != 2
+    {% endif %}
+{% else %}
+    x is none
+{% endif %}
